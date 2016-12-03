@@ -1,0 +1,24 @@
+.absolute-centered{
+  position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width:200px;
+    max-height:200px;
+}
+
+.relative-centered{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-width:200px;
+  max-height:200px;
+}
+
+.relative-centered img{
+  max-width: 50px;
+}

@@ -1,0 +1,26 @@
+<section id="dashboard">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Ultimas facturas</div>
+        <div class="panel-body">
+          grid de facturas
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Estadisticas</div>
+        <div class="panel-body">
+          <canvas baseChart
+                  [data]="doughnutChartData"
+                  [labels]="doughnutChartLabels"
+                  [chartType]="doughnutChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"
+            height="200px"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

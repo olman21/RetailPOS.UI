@@ -1,0 +1,8 @@
+<section>
+  <div class="list-group">
+    <a href="#" [routerLink]="['/MeasureUnits',measureUnit.measureID,'edit']" class="list-group-item" routerLinkActive="active" *ngFor="let measureUnit of measureUnits | async">
+      {{measureUnit.name}} / {{measureUnit.symbol}}
+    </a>
+  </div>
+
+</section>

@@ -1,0 +1,26 @@
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Código</th>
+    <th>Descripción</th>
+    <th>Precio</th>
+    <th>Qty</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of (Products | async)">
+    <td>{{product.barCode}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.price | number:'1.2-2'}} {{product.measureUnit?.symbol}}</td>
+    <td>{{product.qty | number:'1.2-2'}} </td>
+  </tr>
+  <tr [hidden]="(Products | async)">
+    <td colspan="4">
+      <div class="relative-centered">
+        <img src="../assets/images/spinner1.gif" />
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

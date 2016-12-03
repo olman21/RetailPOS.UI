@@ -1,0 +1,51 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" [routerLink]="['']">Punto de venta</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a href="#" [routerLink]="['Dashboard']" >Panel de control</a></li>
+        <li class="dropdown" dropdown>
+          <a href="#" class="dropdown-toggle" dropdownToggle role="button" aria-haspopup="true" aria-expanded="false">Facturación <span class="caret"></span></a>
+          <ul class="dropdown-menu" routerLinkActive="active">
+            <li routerLinkActive="active"><a href="#" [routerLink]="['Orders']">Facturar</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['PaymentMethods']">Métodos de pago</a></li>
+          </ul>
+        </li>
+        <li class="dropdown" dropdown >
+          <a href="#" class="dropdown-toggle" dropdownToggle role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li routerLinkActive="active"><a href="#" [routerLink]="['Products']">Crear/Editar</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['/MeasureUnits']">Unidades de medida</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['Categories']">Categorias</a></li>
+          </ul>
+        </li>
+        <li class="dropdown" dropdown routerLinkActive="active">
+          <a href="#" class="dropdown-toggle"dropdownToggle role="button" aria-haspopup="true" aria-expanded="false" >Personas <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li routerLinkActive="active"><a href="#">Tipos de contacto</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['ContactMethodTypes']">Métodos de contacto</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['Contacts']">Contactos</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" dropdown>
+          <a href="#"  role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle>
+            <span class="glyphicon glyphicon-user"></span> {{userData?.userName}} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" dropdownMenu>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['ConfigSettings']">Configuración</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['Users']">Manejo de usuarios</a></li>
+            <li role="separator" class="divider"></li>
+            <li routerLinkActive="active"><a href="#" (click)="logout()">Salir del sistema</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
